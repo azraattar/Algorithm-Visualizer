@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="static\styles.css">
+    
+</head>
+<body>
+    <div class="floating-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Algorithm Visualizer</h1>
+            <p class="subtitle">Interactive Data Structures & Algorithms Learning Platform</p>
+        </header>
+
+        <div class="section data-structures">
+            <h2 class="section-title">Data Structures</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🔗</div>
+                    <h3>Linked List</h3>
+                    <p>A linear data structure where elements are stored in nodes, and each node contains data and a reference to the next node.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Insert: O(1)</span>
+                        <span class="complexity-item">Search: O(n)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeDataStructure('linkedlist')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📚</div>
+                    <h3>Stack</h3>
+                    <p>A LIFO (Last In, First Out) data structure that supports push and pop operations at one end called the top.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Push: O(1)</span>
+                        <span class="complexity-item">Pop: O(1)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeDataStructure('stack')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Queue</h3>
+                    <p>A FIFO (First In, First Out) data structure that supports enqueue at rear and dequeue from front.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Enqueue: O(1)</span>
+                        <span class="complexity-item">Dequeue: O(1)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeDataStructure('queue')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🌳</div>
+                    <h3>Binary Tree</h3>
+                    <p>A hierarchical data structure where each node has at most two children, referred to as left and right child.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Insert: O(log n)</span>
+                        <span class="complexity-item">Search: O(log n)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeDataStructure('binarytree')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🗂️</div>
+                    <h3>Hash Table</h3>
+                    <p>A data structure that implements an associative array using a hash function to compute an index for key-value pairs.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Insert: O(1)</span>
+                        <span class="complexity-item">Search: O(1)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeDataStructure('hashtable')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔢</div>
+                    <h3>Array</h3>
+                    <p>A collection of elements stored at contiguous memory locations, providing constant-time access to elements by index.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Access: O(1)</span>
+                        <span class="complexity-item">Insert: O(n)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeDataStructure('array')">Visualize</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section algorithms">
+            <h2 class="section-title">Algorithms</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🫧</div>
+                    <h3>Bubble Sort</h3>
+                    <p>A simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they're in the wrong order.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Best: O(n)</span>
+                        <span class="complexity-item">Worst: O(n²)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeAlgorithm('bubblesort')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Quick Sort</h3>
+                    <p>An efficient divide-and-conquer algorithm that picks a pivot element and partitions the array around it.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Average: O(n log n)</span>
+                        <span class="complexity-item">Worst: O(n²)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeAlgorithm('quicksort')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔍</div>
+                    <h3>Binary Search</h3>
+                    <p>An efficient algorithm for finding an item from a sorted list by repeatedly dividing the search interval in half.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Best: O(1)</span>
+                        <span class="complexity-item">Worst: O(log n)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeAlgorithm('binarysearch')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🧭</div>
+                    <h3>Depth-First Search</h3>
+                    <p>A graph traversal algorithm that explores as far as possible along each branch before backtracking.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Time: O(V + E)</span>
+                        <span class="complexity-item">Space: O(V)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeAlgorithm('dfs')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">📐</div>
+                    <h3>Dijkstra's Algorithm</h3>
+                    <p>A graph search algorithm that finds the shortest path between nodes in a weighted graph with non-negative edge weights.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Time: O((V + E) log V)</span>
+                        <span class="complexity-item">Space: O(V)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeAlgorithm('dijkstra')">Visualize</button>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">🔀</div>
+                    <h3>Merge Sort</h3>
+                    <p>A stable, divide-and-conquer algorithm that divides the array into halves, sorts them, and then merges them back together.</p>
+                    <div class="complexity">
+                        <span class="complexity-item">Time: O(n log n)</span>
+                        <span class="complexity-item">Space: O(n)</span>
+                    </div>
+                    <button class="visualize-btn" onclick="visualizeAlgorithm('mergesort')">Visualize</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="visualizationModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Visualization</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="controls" id="controls"></div>
+            <div class="visualization-container" id="visualizationContainer"></div>
+        </div>
+    </div>
+ <script src="static\script.js"></script>
+    
+</body>
+</html>
