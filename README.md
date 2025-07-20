@@ -25,15 +25,5 @@ An interactive web application to explore and understand **data structures** and
 
 ---
 
-## 📁 File Structure
-
-Algorithm-Visualizer/
-├── app.py # Flask backend serving data and routes
-├── templates/
-│ └── index.html # Main web UI built using Jinja2
-├── static/
-│ ├── styles.css # Styles (not included here)
-│ └── script.js # JS logic (not included here)
-├── requirements.txt # Python dependencies (optional)
-└── README.md # You're here!
+Click here for demo:-  https://algorithm-visualizer-h68z.onrender.com
 ---
